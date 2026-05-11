@@ -14,7 +14,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "progress": true,
-            "extractCss": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -40,7 +39,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -52,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularGrid:build"
+            "buildTarget": "AngularGrid:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularGrid:build:production"
+              "buildTarget": "AngularGrid:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularGrid:build"
+            "buildTarget": "AngularGrid:build"
           }
         },
         "test": {
@@ -145,5 +143,8 @@
       }
     }
   },
-  "defaultProject": "AngularGrid"
+  "defaultProject": "AngularGrid",
+  "cli": {
+    "analytics": "4734bfc3-9ebb-4c1b-b4fb-b36bd1c650de"
+  }
 }

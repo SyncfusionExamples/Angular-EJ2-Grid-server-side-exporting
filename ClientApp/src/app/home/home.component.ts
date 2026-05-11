@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ToolbarItems, GridComponent } from '@syncfusion/ej2-angular-grids';
+import { ToolbarItems, GridComponent, GridAllModule } from '@syncfusion/ej2-angular-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 
@@ -13,7 +13,9 @@ import { ClickEventArgs } from '@syncfusion/ej2-navigations';
                     <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
                     <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
                 </e-columns>
-                </ejs-grid>`
+                </ejs-grid>`,
+  standalone: true,
+  imports: [GridAllModule]
 })
 export class HomeComponent implements OnInit {
 
